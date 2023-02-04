@@ -1,0 +1,18 @@
+.button-effect_header {
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+    
+.button-effect_header:hover {
+  background-color: #F8F8F8;
+}
+
+.button-effect_header:active {
+  background-color: #E8E7E7;
+}
+
+@media(hover: none) {
+  .button-effect_header:hover {
+    background-color: #ffffff;
+  }
+}

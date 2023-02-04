@@ -1,0 +1,166 @@
+.article {
+  margin: 0 25px 80px;
+
+  &__conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-family: $fontprata;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    margin: 0;
+  }
+
+  &__link {
+    font-family: $fontinter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+
+    .text {
+      margin: 0 12px 0 0;
+    }
+  }
+
+  &__arrow {
+    background-image: url(../images/ArrowArticle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 14px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-family: $fontinter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px; 
+    color: #8F8F8F;
+    margin: 0 0 12px;
+    text-transform: none;
+  }
+
+  &__title_list {
+    font-family: $fontinter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+    text-transform: none;
+  }
+}
+
+@media screen and (max-width:1023px) {
+  .article {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__link {
+      font-size: 12px;
+    }
+
+    &__arrow {
+      width: 20px;
+      height: 10px;
+    }
+
+    &__conteiner {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+
+    &__title_list {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width:767px) {
+  .article {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+    &__title {
+      font-size: 28px;
+      text-align: center;
+      margin-left: 25px;
+    }
+
+    &__link {
+      font-size: 12px;
+    }
+
+    &__arrow {
+      width: 20px;
+      height: 10px;
+      margin-right: 25px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+      justify-content: center;
+    }
+
+    &__image {
+      margin: 0 auto 8px;
+    }
+
+    &__conteiner {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 10px;
+      margin: 0 auto 6px;
+      text-align: center;
+    }
+
+    &__title_list {
+      font-size: 12px;
+      text-align: center;
+      margin: 0 auto 12px;
+      padding: 0 15px 0;
+    }
+  }
+}

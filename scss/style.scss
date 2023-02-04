@@ -1,0 +1,21 @@
+$textmargin: 0;
+$fontroboto: 'Roboto Condensed';
+$fontinter: 'Inter';
+$fontprata: 'Prata';
+$textcolor: #303030;
+$background: #F8F8F8;
+
+@import "../vendor/normalize.scss";
+@import "../vendor/fonts/fonts.scss";
+@import "page.scss";
+@import "header.scss";
+@import "./efects/hover-effect.scss";
+@import "./efects/button-effect_header.scss";
+@import "menu.scss";
+@import "./efects/link.scss";
+@import "news.scss";
+@import "slider.scss";
+@import "categories.scss";
+@import "sale.scss";
+@import "product.scss";
+@import "article.scss";

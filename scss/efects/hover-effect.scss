@@ -1,0 +1,16 @@
+
+.hover-effect {
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+  
+.hover-effect:hover {
+  opacity: 0.5;
+}
+  
+
+@media(hover: none) {
+  .hover-effect:hover {
+    opacity: 1;
+  }
+}

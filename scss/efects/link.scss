@@ -1,0 +1,20 @@
+.link {
+  outline: none;
+  text-decoration: none;
+}
+
+.link:link {
+  color: $textcolor;
+}
+
+.link:visited {
+  color: $textcolor;
+}
+
+.link:focus {
+  color: $textcolor;
+}
+
+.link:active {
+  color: $textcolor;
+}

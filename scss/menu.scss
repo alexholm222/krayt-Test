@@ -1,0 +1,242 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  background-color: $background;
+  margin: 20px 25px 20px;
+
+  &__links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    font-family: $fontinter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 62px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 20px;  
+  }
+
+  &__dropdown {
+    position: relative;
+    display: none;
+    margin-left: 18px;
+    .icon {
+      background-image: url(../images/menuButton.svg);
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      transition: transform 0.3s;
+    }
+
+    .icon:active {
+      transform: scale(0.8);
+    }
+  }
+
+  &__dropdown_active {
+    .icon {
+      transform: scale(0.8);
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    top: 70px;
+    left: -18px;
+    z-index: 50;
+    list-style: none;
+    text-transform: uppercase;
+    width: 350px;
+    height: 384px;
+    background-color: $background;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    transition: visibility 0.2s, transform 0.3s;
+    transform: translateX(-400px);
+  }
+
+  &__popup_active {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  &__link {
+    height: 100%;
+    display: flex;
+    padding: 0 30px;
+  }
+
+  &__form {
+    min-height: 62px;
+    margin-right: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-left:1px solid #F0F0F0;
+  }
+
+  &__button {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/search.svg);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin:0 17px 0 26px;
+    cursor: pointer;
+  }
+
+  &__input {
+    border: none;
+    padding: 0;
+    margin: 0;
+    max-width: 180px;
+    background-color: $background;
+    line-height: 100%;
+    font-family: $fontinter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &__input::placeholder {
+    color: #A2A2A2;
+  }
+
+  &__input:focus {
+    border: none;
+    outline: 0;
+    box-shadow: 0 1px 0 0  #E8E8E8;
+  }
+}
+
+@media screen and (max-width:1293px) {
+  .menu {
+    &__link {
+      padding: 0 25px 0;
+    }
+
+    &__form {
+      margin-right: 55px;
+    }
+  }
+}
+
+@media screen and (max-width:1212px) {
+  .menu {
+    &__link {
+      padding: 0 20px 0;
+    }
+
+    &__form {
+      margin-right: 40px;
+    }
+  }
+}
+
+@media screen and (max-width:1150px) {
+  .menu {
+    &__link {
+      padding: 0 15px 0;
+      font-size: 12px;
+    }
+
+    &__form {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width:1023px) {
+  .menu {
+    &__links {
+      display:  none;
+    }
+
+    &__link {
+      padding: 0 0 0 20px;
+      font-size: 14px;
+    }
+
+    &__dropdown {
+      display: block;
+    } 
+
+    &__popup {
+      padding: 10px 0;
+    }
+
+    &__item {
+      height: 60px;
+      width: 100%;
+    }
+
+    &__item:hover {
+      background-color: #ececec;
+    }
+
+    &__link {
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width:850px) {
+  .menu {
+    &__popup {
+      height: 354px;
+    }
+  }
+}
+
+@media screen and (max-width:767px) {
+  .header {
+    &__tel_menu {
+      display: flex;
+    }
+
+    &__auth_menu {
+      margin-top: 12px;
+      display: flex;
+    }
+
+    &__menu_menu {
+      display: flex;
+    }
+    &__tel_menu  {
+      margin-left: 10px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .menu {
+    margin: 10px 0 20px;
+    &__new {
+      margin-left: 20px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media screen and (max-width:550px) {
+  .menu {
+    margin-top: 10px;
+    &__popup {
+      width: 100vw;
+    }
+  }
+}
